@@ -214,7 +214,7 @@
             margin-bottom: 20px;
             font-weight: 800;
             color: #fff;
-            text-transform: uppercase;
+            text-transform:none;
             letter-spacing: 4px;
             background: linear-gradient(135deg, #1E90FF 0%, #FFD700 100%);
             -webkit-background-clip: text;
@@ -503,7 +503,7 @@
 
         .system-left h1 {
             font-family: "Poppins", sans-serif;
-            font-size: 50px;
+            font-size: 30px;
             margin-bottom: 20px;
             font-weight: 800;
             color: #fff;
@@ -523,7 +523,7 @@
 
         .system-description {
             font-family: "Inter", sans-serif;
-            font-size: 1.05rem;
+            font-size: 14px;
             line-height: 1.9;
             color: #bbb;
             margin-bottom: 45px;
@@ -595,7 +595,7 @@
             position: relative;
             width: 100%;
             max-width: 800px;
-            height: 700px;
+            height: 900px;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -604,8 +604,8 @@
         /* Individual Developer Photos with larger sizes */
         .developer-photo1 {
             width: 100%;
-            max-width: 650px;
-            height: 800px;
+            max-width: 700px;
+            height: 70%;
             background: transparent;
             position: relative;
             overflow: hidden;
@@ -621,7 +621,7 @@
         .developer-photo2 {
             width: 100%;
             max-width: 850px;
-            height: 850px;
+            height: 800px;
             background: transparent;
             position: relative;
             overflow: hidden;
