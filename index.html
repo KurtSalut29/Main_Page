@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Systems Hub - Professional Portfolio</title>
+    <link rel="icon" type="image/png" href="TeamLogo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="final.css">
+</head>
+
+<body>
+    <div class="top-header">
+        <div class="logo-top" id="navLogo">
+            <img src="TeamLogo.png" alt="Systems Hub Logo" class="logo-main" data-section="team">
+            <img src="1.png" alt="System 1 Logo" class="logo-system hidden" data-section="system1">
+            <img src="2.png" alt="System 2 Logo" class="logo-system hidden" data-section="system2">
+            <img src="3.png" alt="HerbMed Logo" class="logo-system hidden" data-section="system3">
+            <img src="4.png" alt="Tubig Tracker Logo" class="logo-system hidden" data-section="system4">
+        </div>
+        <div class="nav-menu" id="navMenu">
+            <a href="#team" class="active">Team</a>
+            <a href="#system1">A.C.E</a>
+            <a href="#system2">ASCReM</a>
+            <a href="#system3">HerbMed</a>
+            <a href="#system4">Tubig Tracker</a>
+        </div>
+        <div class="menu-toggle" id="menuToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+
+    <section id="team" class="section team-section visible">
+        <!-- Animated Background -->
+        <div class="animated-background">
+            <div class="gradient-orb orb-1"></div>
+            <div class="gradient-orb orb-2"></div>
+            <div class="gradient-orb orb-3"></div>
+            <div class="gradient-orb orb-4"></div>
+            <div class="gradient-orb orb-5"></div>
+        </div>
+
+        <div class="team-header">
+            <div class="main-logo">
+                <img src="TeamLogo.png" alt="Systems Hub Logo">
+            </div>
+            <h1 class="team-title">Thesis Team</h1>
+            <p class="team-subtitle">Integrated Management Solutions</p>
+            <p class="team-description">
+                We are a dedicated team of system developers specializing in creating innovative management solutions.
+                Our portfolio includes automated class scheduling, student record management, herbal medicine
+                information systems,
+                and water consumption tracking. Each system is designed with precision, efficiency, and user experience
+                in mind,
+                providing comprehensive solutions for educational institutions, healthcare facilities, and resource
+                management organizations.
+            </p>
+        </div>
+
+        <div class="team-grid">
+            <div class="team-member" onclick="scrollToSection('system1')">
+                <div class="member-photo-container">
+                    <div class="member-photo">
+                        <img src="Salut.png" alt="Developer 1">
+                    </div>
+                    <div class="member-logo">
+                        <img src="1.png" alt="System 1 Logo">
+                    </div>
+                </div>
+                <div class="member-info">
+                    <div class="member-name">Kurt Michaek S. Salut</div>
+                    <div class="member-role">Automated Class Engine Scheduling System</div>
+                </div>
+            </div>
+
+            <div class="team-member" onclick="scrollToSection('system2')">
+                <div class="member-photo-container">
+                    <div class="member-photo">
+                        <img src="Maala.png" alt="Developer 2">
+                    </div>
+                    <div class="member-logo">
+                        <img src="2.png" alt="System 2 Logo">
+                    </div>
+                </div>
+                <div class="member-info">
+                    <div class="member-name">Arian Jay G. Maala</div>
+                    <div class="member-role">Automated Class Student Record Monitoring Web Application</div>
+                </div>
+            </div>
+
+            <div class="team-member" onclick="scrollToSection('system3')">
+                <div class="member-photo-container">
+                    <div class="member-photo">
+                        <img src="Villanueva.png" alt="Developer 3">
+                    </div>
+                    <div class="member-logo">
+                        <img src="3.png" alt="HerbMed Logo">
+                    </div>
+                </div>
+                <div class="member-info">
+                    <div class="member-name">Sarah Jane E. Villanueva</div>
+                    <div class="member-role">HerbMed System</div>
+                </div>
+            </div>
+
+            <div class="team-member" onclick="scrollToSection('system4')">
+                <div class="member-photo-container">
+                    <div class="member-photo">
+                        <img src="Noquera.png" alt="Developer 4">
+                    </div>
+                    <div class="member-logo">
+                        <img src="4.png" alt="Tubig Tracker Logo">
+                    </div>
+                </div>
+                <div class="member-info">
+                    <div class="member-name">Jermaine Mae C. Noquera</div>
+                    <div class="member-role">Tubig Tracker System</div>
+                </div>
+            </div>
+        </div>
+        <div class="section-footer"></div>
+    </section>
+
+    <section id="system1" class="section system-section">
+        <div class="decorative-shapes">
+            <div class="shape1 shape-1"></div>
+            <div class="shape1 shape-2"></div>
+            <div class="shape1 shape-3"></div>
+            <div class="shape1 shape-4"></div>
+        </div>
+        <div class="system-content">
+            <div class="system-left">
+                <h2>Project 01</h2>
+                <h1>Automated<br>Class Engine Scheduling <br> System</h1>
+                <p class="system-developer">Developed by: Kurt Michael S. Salut</p>
+                <p class="system-description">
+                    Also known as A.C.E., this web-based system is designed to help administrators and instructors at
+                    Biliran Province State University efficiently manage class schedules. The system automates tasks
+                    such as assigning instructors, subjects, rooms, and time slots, thereby minimizing conflicts,
+                    reducing errors from manual scheduling, and optimizing the use of available resources.
+
+                </p>
+                <!-- SYSTEM 1 -->
+                <div class="system-buttons">
+                    <button class="system-logo-btn" onclick="openModal('system1')">
+                        <img src="1.png" alt="A.C.E Logo">
+                    </button>
+                </div>
+
+            </div>
+            <div class="system-right">
+                <div class="developer-container">
+                    <div class="developer-logo-bg">
+                        <img src="1.png" alt="System 1 Logo">
+                    </div>
+                    <div class="developer-photo1">
+                        <img src="Salut.png" alt="Developer 1">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section-footer"></div>
+    </section>
+
+    <section id="system2" class="section system-section">
+        <div class="decorative-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+            <div class="shape shape-4"></div>
+        </div>
+        <div class="system-content">
+            <div class="system-left">
+                <h2>Project 02</h2>
+                <h1>Automated Student Class Record Monitoring <br> Web Application</h1>
+                <p class="system-developer">Developed by: Arian Jay G. Maala</p>
+                <p class="system-description">
+                    Also known as ASCReM, this web application is designed to help instructors and administrators at the
+                    School of Technology and Computer Studies (STCS) manage student records more efficiently. It
+                    automates tasks such as attendance tracking, score input, grade computation, and report generation,
+                    thereby reducing manual work, improving accuracy, and enabling real-time access.
+                </p>
+                <!-- SYSTEM 2 -->
+                <div class="system-buttons">
+                    <button class="system-logo-btn" onclick="openModal('system2')">
+                        <img src="2.png" alt="ASCReM Logo">
+                    </button>
+                </div>
+            </div>
+            <div class="system-right">
+                <div class="developer-container">
+                    <div class="developer-logo-bg">
+                        <img src="2.png" alt="System 2 Logo">
+                    </div>
+                    <div class="developer-photo2">
+                        <img src="Maala.png" alt="Developer 2">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section-footer"></div>
+    </section>
+
+    <section id="system3" class="section system-section">
+        <div class="decorative-shapes">
+            <div class="shape2 shape-1"></div>
+            <div class="shape2 shape-2"></div>
+            <div class="shape2 shape-3"></div>
+            <div class="shape2 shape-4"></div>
+        </div>
+        <div class="system-content">
+            <div class="system-left">
+                <h2>Project 03</h2>
+                <h1>HerbMed<br>System</h1>
+                <p class="system-developer">Developed by: Sarah Jane E. Villanueva</p>
+                <p class="system-description">
+                    Empowering health with the natural healing power of herbs.
+
+                    Discover safe, effective, and science-backed herbal
+
+                    remedies for everyday wellness.
+                </p>
+                <!-- SYSTEM 3 -->
+                <div class="system-buttons">
+                    <button class="system-logo-btn" onclick="openModal('system3')">
+                        <img src="3.png" alt="HerbMed Logo">
+                    </button>
+                </div>
+            </div>
+            <div class="system-right">
+                <div class="developer-container">
+                    <div class="developer-logo-bg">
+                        <img src="3.png" alt="HerbMed Logo">
+                    </div>
+                    <div class="developer-photo3">
+                        <img src="Villanueva.png" alt="Developer 3">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section-footer"></div>
+    </section>
+
+    <section id="system4" class="section system-section">
+        <div class="decorative-shapes">
+            <div class="shape3 shape-1"></div>
+            <div class="shape3 shape-2"></div>
+            <div class="shape3 shape-3"></div>
+            <div class="shape3 shape-4"></div>
+        </div>
+        <div class="system-content">
+            <div class="system-left">
+                <h2>Project 04</h2>
+                <h1>Tubig Tracker<br>System</h1>
+                <p class="system-developer">Developed by: Jermaine Mae C. Noquera</p>
+                <p class="system-description">
+                    Tubig Tracker System aims to promote faster communication, reduce paperwork, and enhance
+                    transparency between residents and administrators. Ultimately, it provides a convenient, reliable,
+                    and modern approach to water management that benefits both the community and the local service
+                    providers.
+                </p>
+                <!-- SYSTEM 4 -->
+                <div class="system-buttons">
+                    <button class="system-logo-btn" onclick="openModal('system4')">
+                        <img src="4.png" alt="Tubig Tracker Logo">
+                    </button>
+                </div>
+            </div>
+            <div class="system-right">
+                <div class="developer-container">
+                    <div class="developer-logo-bg">
+                        <img src="4.png" alt="Tubig Tracker Logo">
+                    </div>
+                    <div class="developer-photo4">
+                        <img src="Noquera.png" alt="Developer 4">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section-footer"></div>
+    </section>
+
+    <!-- Modal Overlay -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal()">&times;</button>
+            <div class="modal-logo" id="modalLogo">
+                <img src="" alt="System Logo" id="modalLogoImg">
+            </div>
+            <h2 class="modal-title" id="modalTitle">System Name</h2>
+            <p class="modal-description" id="modalDescription">
+                You are about to be redirected to the system. Do you want to continue?
+            </p>
+            <div class="modal-buttons">
+                <a href="#" class="modal-btn" id="modalConfirmBtn" target="_blank">Visit System</a>
+                <button class="modal-btn cancel" onclick="closeModal()">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="navigation">
+        <div class="nav-dot active" onclick="scrollToSection('team')"></div>
+        <div class="nav-dot" onclick="scrollToSection('system1')"></div>
+        <div class="nav-dot" onclick="scrollToSection('system2')"></div>
+        <div class="nav-dot" onclick="scrollToSection('system3')"></div>
+        <div class="nav-dot" onclick="scrollToSection('system4')"></div>
+    </div>
+
+    <div class="footer-info">
+        <div>contact@systemshub.com</div>
+        <div>www.systemshub.com</div>
+        <div>© 2024 Systems Hub. All rights reserved.</div>
+    </div>
+
+    <script src="final.js"></script>
+</body>
+
+</html>
