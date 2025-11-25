@@ -1,113 +1,129 @@
- const menuToggle = document.getElementById('menuToggle');
-        const navMenu = document.getElementById('navMenu');
-        
-        menuToggle.addEventListener('click', () => {
-            menuToggle.classList.toggle('active');
-            navMenu.classList.toggle('active');
-        });
+// Splash Screen Handler
+document.addEventListener('DOMContentLoaded', function() {
+    const body = document.body;
+    const splashScreen = document.getElementById('splashScreen');
+    
+    // Lock body scroll during splash
+    body.classList.add('splash-active');
+    
+    // Remove splash screen and unlock scroll after animation
+    setTimeout(() => {
+        splashScreen.style.display = 'none';
+        body.classList.remove('splash-active');
+    }, 5300); // 5.3 seconds total (animation + fade out)
+});
 
-        document.querySelectorAll('.nav-menu a').forEach(link => {
-            link.addEventListener('click', () => {
-                menuToggle.classList.remove('active');
-                navMenu.classList.remove('active');
-            });
-        });
+// Mobile Menu Toggle
+const menuToggle = document.getElementById('menuToggle');
+const navMenu = document.getElementById('navMenu');
 
-        function scrollToSection(sectionId) {
-            const section = document.getElementById(sectionId);
-            if (section) {
-                section.scrollIntoView({ behavior: 'smooth' });
-            }
+menuToggle.addEventListener('click', () => {
+    menuToggle.classList.toggle('active');
+    navMenu.classList.toggle('active');
+});
+
+document.querySelectorAll('.nav-menu a').forEach(link => {
+    link.addEventListener('click', () => {
+        menuToggle.classList.remove('active');
+        navMenu.classList.remove('active');
+    });
+});
+
+function scrollToSection(sectionId) {
+    const section = document.getElementById(sectionId);
+    if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+    }
+}
+
+function updateNavLogo(sectionId) {
+    const logos = document.querySelectorAll('#navLogo img');
+    logos.forEach(logo => {
+        if (logo.dataset.section === sectionId) {
+            logo.classList.remove('hidden');
+        } else {
+            logo.classList.add('hidden');
         }
+    });
+}
 
-        function updateNavLogo(sectionId) {
-            const logos = document.querySelectorAll('#navLogo img');
-            logos.forEach(logo => {
-                if (logo.dataset.section === sectionId) {
-                    logo.classList.remove('hidden');
-                } else {
-                    logo.classList.add('hidden');
-                }
-            });
+const observerOptions = {
+    threshold: 0.3,
+    rootMargin: '0px'
+};
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
         }
+    });
+}, observerOptions);
 
-        const observerOptions = {
-            threshold: 0.3,
-            rootMargin: '0px'
-        };
+document.querySelectorAll('.section').forEach(section => {
+    observer.observe(section);
+});
 
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, observerOptions);
+const sections = document.querySelectorAll('.section');
+const navDots = document.querySelectorAll('.nav-dot');
+const navLinks = document.querySelectorAll('.nav-menu a');
 
-        document.querySelectorAll('.section').forEach(section => {
-            observer.observe(section);
-        });
+let ticking = false;
 
-        const sections = document.querySelectorAll('.section');
-        const navDots = document.querySelectorAll('.nav-dot');
-        const navLinks = document.querySelectorAll('.nav-menu a');
-
-        let ticking = false;
-
-        window.addEventListener('scroll', () => {
-            if (!ticking) {
-                window.requestAnimationFrame(() => {
-                    let current = '';
-                    
-                    sections.forEach(section => {
-                        const sectionTop = section.offsetTop;
-                        const sectionHeight = section.clientHeight;
-                        if (window.pageYOffset >= sectionTop - 300) {
-                            current = section.getAttribute('id');
-                        }
-                    });
-
-                    navDots.forEach((dot, index) => {
-                        dot.classList.remove('active');
-                        if (index === Array.from(sections).findIndex(s => s.id === current)) {
-                            dot.classList.add('active');
-                        }
-                    });
-
-                    navLinks.forEach(link => {
-                        link.classList.remove('active');
-                        if (link.getAttribute('href') === '#' + current) {
-                            link.classList.add('active');
-                        }
-                    });
-
-                    updateNavLogo(current);
-
-                    ticking = false;
-                });
-
-                ticking = true;
-            }
-        });
-
-        window.addEventListener('scroll', () => {
-            const shapes = document.querySelectorAll('.shape');
-            const scrolled = window.pageYOffset;
+window.addEventListener('scroll', () => {
+    if (!ticking) {
+        window.requestAnimationFrame(() => {
+            let current = '';
             
-            shapes.forEach((shape, index) => {
-                const speed = 0.1 + (index * 0.05);
-                shape.style.transform = `translateY(${scrolled * speed}px)`;
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (window.pageYOffset >= sectionTop - 300) {
+                    current = section.getAttribute('id');
+                }
             });
+
+            navDots.forEach((dot, index) => {
+                dot.classList.remove('active');
+                if (index === Array.from(sections).findIndex(s => s.id === current)) {
+                    dot.classList.add('active');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + current) {
+                    link.classList.add('active');
+                }
+            });
+
+            updateNavLogo(current);
+
+            ticking = false;
         });
 
-        window.addEventListener('load', () => {
-            const teamSection = document.getElementById('team');
-            if (teamSection) {
-                teamSection.classList.add('visible');
-            }
-        });
+        ticking = true;
+    }
+});
 
-        // System data with links and descriptions
+window.addEventListener('scroll', () => {
+    const shapes = document.querySelectorAll('.shape');
+    const scrolled = window.pageYOffset;
+    
+    shapes.forEach((shape, index) => {
+        const speed = 0.1 + (index * 0.05);
+        shape.style.transform = `translateY(${scrolled * speed}px)`;
+    });
+});
+
+window.addEventListener('load', () => {
+    const teamSection = document.getElementById('team');
+    if (teamSection) {
+        teamSection.classList.add('visible');
+    }
+});
+
+// System data with links and descriptions
 const systemData = {
     system1: {
         name: 'A.C.E Scheduling System',
@@ -242,7 +258,6 @@ window.addEventListener('scroll', function() {
         }
     });
 });
-
 
 // Close mobile menu when clicking a link
 document.querySelectorAll('.nav-menu a').forEach(link => {
